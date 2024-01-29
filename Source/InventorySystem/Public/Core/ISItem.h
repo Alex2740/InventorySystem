@@ -3,14 +3,18 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Engine/DataTable.h"
 #include "UObject/Object.h"
 #include "ISItem.generated.h"
 
 USTRUCT(BlueprintType)
-struct FISItem
+struct FISItem : public FTableRowBase
 {
 	GENERATED_BODY()
-
-	FName ItemID;
-	int Quantity;
+	
+	FText Name;
+	FText Description;
+	//UTexture2D Thumbnail;
+	TSubclassOf<AActor> ItemClass;
+	int StackSize;
 };

@@ -26,6 +26,8 @@ public class InventorySystem : ModuleRules
 			new string[]
 			{
 				"Core",
+				"InteractionSystem",
+				"Engine",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
